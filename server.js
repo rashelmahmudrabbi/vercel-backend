@@ -59,7 +59,7 @@ app.use((req, res, next) => {
   try {
     const fs = require('fs');
     fs.appendFileSync('C:\\Users\\Nazmul\\.gemini\\antigravity-ide\\brain\\87dd51c6-8e83-4392-aad8-4cfdb121e2fc\\request_log.txt', `${new Date().toISOString()} - ${req.method} ${req.originalUrl}\n`);
-  } catch (e) {}
+  } catch (e) { }
   next();
 });
 app.use(express.json({ limit: '10mb' }));
@@ -99,7 +99,7 @@ const PORT = process.env.PORT || 5000;
 
 const start = async () => {
   await connectDB();
-  
+
   // Start Monthly Invoice Auto-Scheduler
   const { startInvoiceScheduler } = require('./utils/invoiceScheduler');
   startInvoiceScheduler();
