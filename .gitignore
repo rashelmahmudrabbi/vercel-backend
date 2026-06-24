@@ -5,3 +5,5 @@ db.sqlite3
 .env
 media/
 staticfiles/
+node_modules
+dist
